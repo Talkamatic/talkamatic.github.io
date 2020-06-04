@@ -1,0 +1,984 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+    
+    
+      
+        <title>API for HTTP frontends - TDM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a2408e81.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#important-concepts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="TDM" class="md-header-nav__button md-logo" aria-label="TDM">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            TDM
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              API for HTTP frontends
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TDM" class="md-nav__button md-logo" aria-label="TDM">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    TDM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../formalism/" title="Dialog Formalism" class="md-nav__link">
+      Dialog Formalism
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorial/" title="Step-by-step tutorial" class="md-nav__link">
+      Step-by-step tutorial
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../examples/" title="Examples" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../rasa_nlu/" title="Using Rasa NLU" class="md-nav__link">
+      Using Rasa NLU
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      APIs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="APIs" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        APIs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="API for HTTP frontends" class="md-nav__link md-nav__link--active">
+      API for HTTP frontends
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../http_service/" title="API for HTTP services" class="md-nav__link">
+      API for HTTP services
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <p>This document describes API version 3.3 for HTTP frontends, enabling frontends to integrate with TDM over HTTP. It covers e.g. how input from the user and output from TDM are communicated between TDM and the client.</p>
+<h1 id="important-concepts">Important concepts</h1>
+<p>This section describes some concepts that are important to understand and comply with when integrating TDM in a dialog system.</p>
+<p><strong>Requests and responses</strong></p>
+<p>TDM serves an HTTP server and responds to requests done by the client. The client is the consumer of the API outlined in this document.</p>
+<p>The client invokes TDM with an HTTP request to the interaction endpoint, e.g. <code>http://localhost:9090/interact</code>, using the POST method and a JSON body. The client should expect the status code to be 200 OK. For other status codes, the client should report an error to the user.</p>
+<p>The request body always contains a version number, specifying the version of the HTTP API format.</p>
+<p>The exact format of the request and the response depends on the type of request as described in the separate sections below.</p>
+<p><strong>Turn management</strong></p>
+<p>Turn management is a vital part of dialog between humans, read for instance <a href="https://en.wikipedia.org/wiki/Turn-taking">the Wikipedia article</a>. Since TDM is based on research on human-human dialog, turn management is a central concept here too.</p>
+<p>The TDM client is responsible for turn management, because it's the component that is closest to the human in the human-machine dialog that TDM enables. Since the machine is intended to assist the human, the human decides the pace, the turn taking, of the conversation. In spoken dialog, turn taking happens in close collaboration with the spoken output of the system, which means that the system's turn management needs to happen as close to this component, the text-to-speech component (TTS), as possible.</p>
+<p>TDM enables intuitive turn taking by instructing its client how to deal with the user input that it's range of sensors can pick up. The instructions are straightforward and revolve around passivity. If the user is passive, for instance doesn't know what to say, for a given amount of time, the client sends TDM a <a href="#passivity-requests">passivity request</a>, which lets the system take the next turn instead of the user.</p>
+<p>The user should be considered passive when not doing anything related to the dialog. If the user however takes some action (although not completing its turn just yet), for instance by typing (if it's a text interface) or talking (if it's a spoken interface), the user should be considered active and the passivity request should not be sent to TDM. Instead the user should be allowed to complete its turn, resulting in an input request.</p>
+<p>TDM instructs its client about how long time of passivity that should pass before sending the passivity request in the <code>output.expected_passivity</code> field of the <a href="#response-format">response</a>.</p>
+<p>For instance, if TDM responds with:</p>
+<pre><code class="json">{
+  &quot;output&quot;: {
+    ...
+    &quot;expected_passivity&quot;: 1.0
+  },
+  ...
+}
+</code></pre>
+
+<p>then the client should send a <a href="#passivity-requests">passivity request</a> when the user has been passive for 1 second. The 1 second should start counting when the system utterance has reached the user, which in a spoken interface means when the TTS finished speaking TDM's utterance.</p>
+<p>Note that sometimes TDM does not have anything to say when the user becomes passive (<code>"expected_passivity": null</code>), and sometimes it just needs to progress the conversation immediately after saying something (<code>"expected_passivity": 0.0</code>).</p>
+<p>Read the details about how to interpret the <code>expected_passivity</code> value in the <a href="#response-format">response format section</a>.</p>
+<p><strong>Errors</strong></p>
+<p>When an error occurs in TDM during a request, for instance due to incomplete turn management, the <a href="#response-format">response</a> contains the <code>"error"</code> field. It's important to note that this could mean that the session stops. If it has stopped, further requests on the same session will report errors that the provided session ID is unknown.</p>
+<h1 id="start-session-requests">Start session requests</h1>
+<p>When a new session should be started, the client issues a <code>start_session</code> request. The response contains initial output from TDM and a session ID that can be used in subsequent requests. For more details, see <a href="#response-format">the response format</a>.</p>
+<p>If a session ID is provided together with the <code>start_session</code> request, an error is given. The integrity of the session is however maintained.</p>
+<p><strong>Request</strong></p>
+<p>Example:</p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;session&quot;: {},
+  &quot;request&quot;: {
+    &quot;start_session&quot;: {}
+  }
+}
+</code></pre>
+
+<p>The <code>session</code> object can contain frontend-specific session data to be used in dialog or by services. For more details, see <a href="#session-object">the session object</a></p>
+<p>The <code>start_session</code> object may contain the following optional members:</p>
+<ul>
+<li><code>ddd_set</code>: A string specifying a DDD set for the session. If omitted, a default DDD set configured by the backend is used.</li>
+</ul>
+<p>The <code>start_session</code> request may be issued on its own, so that the system will start the conversation; or combined with <code>natural_language_input</code>, <code>semantic_input</code> and <code>event</code> requests to start the conversation from there.</p>
+<p>Example when combined with <code>natural_language_input</code>:</p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;request&quot;: {
+    &quot;start_session&quot;: {},
+    &quot;natural_language_input&quot;: {...}
+  }
+}
+</code></pre>
+
+<p><strong>Response</strong></p>
+<p>See <a href="#response-format">response format</a>.</p>
+<h1 id="natural-language-input-requests">Natural language input requests</h1>
+<p>When the client detects natural language input from the user, it issues a request and receives output from TDM. The request can contain either hypotheses with the <code>speech</code> modality, or a single utterance with the <code>text</code> modality.</p>
+<p><strong>Request</strong></p>
+<p>Speech input example:</p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;session&quot;: {
+    &quot;session_id&quot;: &quot;0000-abcd-1111-efgh&quot;
+  },
+  &quot;request&quot;: {
+    &quot;natural_language_input&quot;: {
+      &quot;modality&quot;: &quot;speech&quot;,
+      &quot;hypotheses&quot;: [
+        {
+          &quot;utterance&quot;: &quot;call John&quot;,
+          &quot;confidence&quot;: 0.81
+        },
+        {
+          &quot;utterance&quot;: &quot;calling John&quot;,
+          &quot;confidence&quot;: 0.65
+        },
+        {
+          &quot;utterance&quot;: &quot;call him John&quot;,
+          &quot;confidence&quot;: 0.31
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<p>Text input example:</p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;session&quot;: {
+    &quot;session_id&quot;: &quot;0000-abcd-1111-efgh&quot;
+  },
+  &quot;request&quot;: {
+    &quot;natural_language_input&quot;: {
+      &quot;modality&quot;: &quot;text&quot;,
+      &quot;utterance&quot;: &quot;I'm searching for flights from London to Paris tomorrow&quot;
+    }
+  }
+}
+</code></pre>
+
+<p>The <code>session</code> object can contain frontend-specific session data to be used in dialog or by services. For more details, see <a href="#session-object">the session object</a></p>
+<p>The <code>natural_language_input</code> object contains the following members:</p>
+<ul>
+<li><code>modality</code>: Should be either <code>speech</code> or <code>text</code> depending on how the input was detected.</li>
+<li><code>hypotheses</code>: A list of <a href="#hypothesis-object">hypothesis objects</a> which should be provided if <code>modality</code> is <code>speech</code>; otherwize the field should be omitted.</li>
+<li><code>utterance</code>: A string containing the utterance if <code>modality</code> is <code>text</code>; otherwize the field should be omitted.</li>
+</ul>
+<p>The <code>natural_language_input</code> request may be combined with the <code>start_session</code> request when a session does not yet exist, but may not be combined with other requests.</p>
+<p>Example:</p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;request&quot;: {
+    &quot;start_session&quot;: {},
+    &quot;natural_language_input&quot;: {...}
+  }
+}
+</code></pre>
+
+<p><strong>Response</strong></p>
+<p>See <a href="#response-format">response format</a>.</p>
+<h1 id="semantic-input-requests">Semantic input requests</h1>
+<p>When the client has user input on a semantic format, as a user move, it should issue the <code>semantic_input</code> request.</p>
+<p>Semantic in this case means that the user input does not need to be interpreted; the user move is already known. This is useful when an external natural language understanding (NLU) component has already interpreted the input; when the user presses a button in a GUI; or for instance when the user makes a gesture which is interpreted as a user move.</p>
+<p>The semantic format is different for each of the supported user moves. See <a href="#move-object">the move object section</a> for examples.</p>
+<p><strong>Request</strong></p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;session&quot;: {
+    &quot;session_id&quot;: &quot;0000-abcd-1111-efgh&quot;
+  },
+  &quot;request&quot;: {
+    &quot;semantic_input&quot;: {
+      &quot;interpretations&quot;: [
+        {
+          &quot;utterance&quot;: &quot;call John&quot;,
+          &quot;modality&quot;: &quot;speech&quot;,
+          &quot;moves&quot;: [
+            {
+              &quot;perception_confidence&quot;: 0.81,
+              &quot;understanding_confidence&quot;: 0.92215,
+              &quot;ddd&quot;: &quot;phone&quot;,
+              &quot;semantic_expression&quot;: &quot;request(call)&quot;
+            },
+            {
+              &quot;perception_confidence&quot;: 0.81,
+              &quot;understanding_confidence&quot;: 0.98532,
+              &quot;ddd&quot;: &quot;phone&quot;,
+              &quot;semantic_expression&quot;: &quot;answer(contact_john)&quot;
+            }
+          ]
+        },
+        {
+          &quot;utterance&quot;: &quot;calling John&quot;,
+          &quot;modality&quot;: &quot;speech&quot;,
+          &quot;moves&quot;: [
+            {
+              &quot;perception_confidence&quot;: 0.65,
+              &quot;understanding_confidence&quot;: 0.5234,
+              &quot;ddd&quot;: &quot;phone&quot;,
+              &quot;semantic_expression&quot;: &quot;request(call)&quot;
+            },
+            {
+              &quot;perception_confidence&quot;: 0.65,
+              &quot;understanding_confidence&quot;: 0.98532,
+              &quot;ddd&quot;: &quot;phone&quot;,
+              &quot;semantic_expression&quot;: &quot;answer(contact_john)&quot;
+            }
+          ]
+        },
+        {
+          &quot;utterance&quot;: &quot;call him John&quot;,
+          &quot;modality&quot;: &quot;speech&quot;,
+          &quot;moves&quot;: [
+            {
+              &quot;perception_confidence&quot;: 0.31,
+              &quot;understanding_confidence&quot;: 0.2216,
+              &quot;ddd&quot;: &quot;phone&quot;,
+              &quot;semantic_expression&quot;: &quot;request(call)&quot;
+            },
+            {
+              &quot;perception_confidence&quot;: 0.31,
+              &quot;understanding_confidence&quot;: 0.98532,
+              &quot;ddd&quot;: &quot;phone&quot;,
+              &quot;semantic_expression&quot;: &quot;answer(contact_john)&quot;
+            }
+          ]
+        },
+        {
+          &quot;utterance&quot;: &quot;call him John&quot;,
+          &quot;modality&quot;: &quot;speech&quot;,
+          &quot;moves&quot;: [
+            {
+              &quot;perception_confidence&quot;: 0.31,
+              &quot;understanding_confidence&quot;: 0.10126,
+              &quot;ddd&quot;: &quot;phone&quot;,
+              &quot;semantic_expression&quot;: &quot;ask(?X.phone_number(X))&quot;
+            },
+            {
+              &quot;perception_confidence&quot;: 0.31,
+              &quot;understanding_confidence&quot;: 0.98532,
+              &quot;ddd&quot;: &quot;phone&quot;,
+              &quot;semantic_expression&quot;: &quot;answer(contact_john)&quot;
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<p>The <code>session</code> object can contain frontend-specific session data to be used in dialog or by services. For more details, see <a href="#session-object">the session object</a></p>
+<p>The <code>semantic_input</code> object contains the following members:</p>
+<ul>
+<li><code>interpretations</code>: A list of <a href="#interpretation-object">interpretation objects</a>. TDM will use confidence scores and the context of the current state of the session to decide which interpretation to act upon.</li>
+</ul>
+<p>The <code>semantic_input</code> request may be combined with the <code>start_session</code> request when a session does not yet exist, but may not be combined with other requests.</p>
+<p>Example:</p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;request&quot;: {
+    &quot;start_session&quot;: {},
+    &quot;semantic_input&quot;: {...}
+  }
+}
+</code></pre>
+
+<p><strong>Response</strong></p>
+<p>See <a href="#response-format">response format</a>.</p>
+<h1 id="passivity-requests">Passivity requests</h1>
+<p>When the client detects user passivity, it issues a request and receives output from TDM.</p>
+<p><strong>Request</strong></p>
+<p>Example:</p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;session&quot;: {
+    &quot;session_id&quot;: &quot;0000-abcd-1111-efgh&quot;
+  },
+  &quot;request&quot;: {
+    &quot;passivity&quot;: {}
+  }
+}
+</code></pre>
+
+<p>The <code>session</code> object can contain frontend-specific session data to be used in dialog or by services. For more details, see <a href="#session-object">the session object</a></p>
+<p>The <code>passivity</code> request may not be combined with other requests in the same call.</p>
+<p><strong>Response</strong></p>
+<p>See <a href="#response-format">response format</a>.</p>
+<h1 id="event-requests">Event requests</h1>
+<p>When the client detects that an event pertaining to a relevant DDD has occurred, it should issue an event notification request, and receives output from TDM.</p>
+<p><strong>Request</strong></p>
+<p>Example:</p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;session&quot;: {
+    &quot;session_id&quot;: &quot;0000-abcd-1111-efgh&quot;
+  },
+  &quot;request&quot;: {
+    &quot;event&quot;: {
+      &quot;name&quot;: &quot;IncomingCall&quot;,
+      &quot;status&quot;: &quot;started&quot;,
+      &quot;parameters&quot;: {
+        &quot;caller&quot;: &quot;contact_12345&quot;
+      }
+    }
+  }
+}
+</code></pre>
+
+<p>The <code>session</code> object can contain frontend-specific session data to be used in dialog or by services. For more details, see <a href="#session-object">the session object</a></p>
+<p>The <code>event</code> object contains the following members:</p>
+<ul>
+<li><code>name</code>: A string corresponding to the name of the event, specified as an action in the service interface.</li>
+<li><code>status</code>: Either <code>started</code> or <code>ended</code>.</li>
+<li><code>parameters</code>: A map of key-value pairs pertaining to the event, corresponding to the parameters specified for the action in the service interface. The key is a string matching the parameter's predicate, and the value is a string containing the ID of the value (e.g. a number or a string depending on the sort).</li>
+</ul>
+<p>The <code>event</code> request may be combined with the <code>start_session</code> request when a session does not yet exist, but may not be combined with other requests.</p>
+<p>Example:</p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;request&quot;: {
+    &quot;start_session&quot;: {},
+    &quot;event&quot;: {...}
+  }
+}
+</code></pre>
+
+<p><strong>Response</strong></p>
+<p>See <a href="#response-format">response format</a>.</p>
+<h1 id="session-object">Session object</h1>
+<p>A session object can contain frontend-specific session data. The data is forwarded as is to all service calls on the <a href="../http_service/#session-object">HTTP API for services</a>. That way, the data can be used in service calls directly; or influence the dialog, for instance by being retrieved through service queries.</p>
+<p>Note that session data is not automatically stored or attached to the session within TDM. It is returned in the <a href="#response-format">response</a> and can be injected in future requests. If specific data should be available to all service calls on a session, the data needs to be injected in every request on that session, or the DDD needs to retrieve it into the dialog state, for instance by a service query.</p>
+<p>For all requests except <a href="#start-session-requests">start session</a>, a <code>session_id</code> is required and used to identify to which session the request is being made.</p>
+<p>For start session requests however, the <code>session_id</code> is disallowed and instead generated by TDM. It should be retrieved from the <a href="#response-format">response</a>.</p>
+<p>Example for start session request:</p>
+<pre><code class="json">{
+  &quot;session&quot;: {
+    &quot;my_frontend&quot;: {
+      &quot;user_id&quot;: &quot;123-abc-456-def&quot;,
+      &quot;position&quot;: {
+        &quot;latitude&quot;: &quot;57.699188&quot;,
+        &quot;longitude&quot;: &quot;11.948313&quot;
+      }
+    }
+  }
+}
+</code></pre>
+
+<p>Example otherwise:</p>
+<pre><code class="json">{
+  &quot;session&quot;: {
+    &quot;session_id&quot;: &quot;0000-abcd-1111-efgh&quot;,
+    &quot;my_frontend&quot;: {
+      &quot;user_id&quot;: &quot;123-abc-456-def&quot;,
+      &quot;position&quot;: {
+        &quot;latitude&quot;: &quot;57.699188&quot;,
+        &quot;longitude&quot;: &quot;11.948313&quot;
+      }
+    }
+  }
+}
+</code></pre>
+
+<h1 id="hypothesis-object">Hypothesis object</h1>
+<p>A hypothesis object contains information about what the user is believed to have uttered, consisting of the following members:</p>
+<ul>
+<li><code>utterance</code>: A string containing the utterance.</li>
+<li><code>confidence</code>: A number from 0.0 to 1.0 representing the confidence of the hypothesis.</li>
+</ul>
+<h1 id="interpretation-object">Interpretation object</h1>
+<p>An interpretation translates an utterance into one or several semantic moves. An interpretation object contains:</p>
+<ul>
+<li><code>utterance</code>: (optional) A string containing the utterance.</li>
+<li><code>modality</code>: The modality that the user used to provide the original input. One of <code>speech</code>, <code>text</code>, <code>haptic</code>, <code>other</code>.</li>
+<li><code>moves</code>: A list of <a href="#move-object">move objects</a>.</li>
+</ul>
+<h1 id="move-object">Move object</h1>
+<p>A move object contains information about how a user move was interpreted. Its members are:</p>
+<ul>
+<li><code>ddd</code>: (optional) A string containing the DDD name. For DDD independent moves (e.g. <code>answer(yes)</code> and <code>request(up)</code>), this field may be omitted; in which case the currently active DDD will be used to parse the semantic expression.</li>
+<li><code>perception_confidence</code>: A float between <code>0.0</code> and <code>1.0</code>, representing the confidence that a spoken utterance actually matches the textual utterance, for instance when a speech-to-text (STT) component turned it into text. If no perception component was used, the confidence should be set to <code>1.0</code>.</li>
+<li><code>understanding_confidence</code>: A float between <code>0.0</code> and <code>1.0</code>, representing the confidence that the textual utterance actually represents this move, for instance when an NLU component interprets the textual utterance. If no understanding component was used, for instance if the user pressed a button, the confidence should be set to <code>1.0</code>.</li>
+<li><code>semantic_expression</code>: A semantic expression for the move, expressed in the <a href="../../formalism/#moves">dialog formalism</a>. Supported moves are <code>request</code>, <code>ask</code> and <code>answer</code>. See examples below for details.</li>
+</ul>
+<p><strong>Example of a <code>request</code> move:</strong></p>
+<p>A <code>request</code> move has just one parameter: An action. In this case the <code>call</code> action, which must be defined in the ontology of the <code>phone</code> DDD.</p>
+<pre><code class="json">{
+  &quot;ddd&quot;: &quot;phone&quot;,
+  &quot;semantic_expression&quot;: &quot;request(call)&quot;,
+  &quot;perception_confidence&quot;: 0.65,
+  &quot;understanding_confidence&quot;: 0.5234
+}
+</code></pre>
+
+<p><strong>Example of builtin <code>request</code> move:</strong></p>
+<p>The builtin and DDD independent actions <code>top</code> and <code>up</code> can be requested without including the DDD name:</p>
+<pre><code class="json">{
+  &quot;semantic_expression&quot;: &quot;request(top)&quot;,
+  &quot;perception_confidence&quot;: 0.56,
+  &quot;understanding_confidence&quot;: 0.65305
+}
+</code></pre>
+
+<p><strong>Example of <code>ask</code> moves:</strong></p>
+<p>An <code>ask</code> move contains a question. Questions are expressed with a leading <code>?</code>. Question in <code>ask</code> moves always contain a predicate that must be defined in the ontology of the DDD. There are two supported types of questions in <code>ask</code> moves: wh-questions (questions about what, when, whom, which etc.) and yes-no questions (that can be answered with a yes or no).</p>
+<p><strong><em>Example of an <code>ask</code> move containing a wh-question</em></strong>:</p>
+<p>Wh-questions are represented in a lambda-like form. In the case below, the question <code>?X.phone_number(X)</code> means that we're asking what someone's phone number is.</p>
+<pre><code class="json">{
+  &quot;ddd&quot;: &quot;phone&quot;,
+  &quot;semantic_expression&quot;: &quot;ask(?X.phone_number(X))&quot;,
+  &quot;perception_confidence&quot;: 0.31,
+  &quot;understanding_confidence&quot;: 0.10126
+}
+</code></pre>
+
+<p><strong><em>Example of an <code>ask</code> move containing a yes-no question</em></strong>:</p>
+<p>In the case below, the question <code>?missed_calls</code> means that we're asking whether there are any missed calls (without asking e.g. when or from whom).</p>
+<pre><code class="json">{
+  &quot;ddd&quot;: &quot;phone&quot;,
+  &quot;semantic_expression&quot;: &quot;ask(?missed_calls)&quot;,
+  &quot;perception_confidence&quot;: 0.43,
+  &quot;understanding_confidence&quot;: 0.2432
+}
+</code></pre>
+
+<p><strong>Example of a sortal <code>answer</code> move:</strong></p>
+<p>A sortal <code>answer</code> move has an individual as its parameter. In this case, the individual <code>contact_john</code>, must be defined in the ontology of the <code>phone</code> DDD.</p>
+<pre><code class="json">{
+  &quot;ddd&quot;: &quot;phone&quot;,
+  &quot;semantic_expression&quot;: &quot;answer(contact_john)&quot;,
+  &quot;perception_confidence&quot;: 0.65,
+  &quot;understanding_confidence&quot;: 0.98532
+}
+</code></pre>
+
+<p><strong>Example of a propositional <code>answer</code> move:</strong></p>
+<p>A propositional <code>answer</code> move has a proposition as its parameter, consisting of a predicate and an individual. In this case, the predicate <code>selected_contact</code>, and the individual <code>contact_john</code>, must be defined in the ontology of the <code>phone</code> DDD.</p>
+<pre><code class="json">{
+  &quot;ddd&quot;: &quot;phone&quot;,
+  &quot;semantic_expression&quot;: &quot;answer(selected_contact(contact_john))&quot;,
+  &quot;perception_confidence&quot;: 0.65,
+  &quot;understanding_confidence&quot;: 0.71347
+}
+</code></pre>
+
+<p><strong>Example of builtin sortal <code>answer</code> move:</strong></p>
+<p>The builtin and DDD independent answers <code>yes</code> and <code>no</code> can be used without including the DDD name:</p>
+<pre><code class="json">{
+  &quot;semantic_expression&quot;: &quot;answer(yes)&quot;,
+  &quot;perception_confidence&quot;: 0.834,
+  &quot;understanding_confidence&quot;: 0.71359
+}
+</code></pre>
+
+<h1 id="response-format">Response format</h1>
+<p>The response format differs when the request was successful compared to when it encountered an error.</p>
+<p><strong>Successful request</strong></p>
+<p>The TDM response from a successful request typically contains an output utterance and other relevant information. Example:</p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;session&quot;: {
+    &quot;session_id&quot;: &quot;0000-abcd-1111-efgh&quot;
+  },
+  &quot;output&quot;: {
+    &quot;moves&quot;: [&quot;ask(?X.selected_contact(X))&quot;],
+    &quot;utterance&quot;: &quot;Who do you want to call?&quot;,
+    &quot;expected_passivity&quot;: 5.0,
+    &quot;actions&quot;: []
+  },
+  &quot;nlu_result&quot;: {
+    &quot;selected_utterance&quot;: &quot;call John&quot;,
+    &quot;confidence&quot;: 0.88
+  },
+  &quot;context&quot;: {
+    &quot;active_ddd&quot;: &quot;my_ddd&quot;,
+    &quot;facts&quot;: {},
+    &quot;language&quot;: &quot;eng&quot;,
+    &quot;goal&quot;: &quot;perform(call)&quot;,
+    &quot;plan&quot;: [&quot;findout(?X.selected_contact(X))&quot;],
+    &quot;facts_being_grounded&quot;: {},
+    &quot;selected_hypothesis&quot;: {
+      &quot;utterance&quot;: &quot;call John&quot;,
+      &quot;confidence&quot;: 0.88
+    },
+    &quot;selected_interpretation&quot;: [{
+      &quot;ddd&quot;: &quot;send_to_frontend&quot;,
+      &quot;understanding_confidence&quot;: &quot;0.749&quot;,
+      &quot;perception_confidence&quot;: &quot;0.88&quot;,
+      &quot;semantic_expression&quot;: &quot;request(call)&quot;
+    }],
+    &quot;expected_input&quot;: {
+      &quot;alternatives&quot;: [
+        {&quot;semantic_expression&quot;: &quot;answer(contact_john)&quot;},
+        {&quot;semantic_expression&quot;: &quot;answer(contact_lisa)&quot;}
+      ]
+    }
+  }
+}
+</code></pre>
+
+<p>The <code>session</code> object is always provided and contains the same data that was provided in the request. Unlike requests however, it always contains:</p>
+<ul>
+<li><code>session_id</code>: The ID of the current session.</li>
+</ul>
+<p>The <code>output</code> object is provided unless an error has occurred and has the following members:</p>
+<ul>
+<li><code>moves</code>: The moves made by the system this turn. This is a list of <a href="../../formalism/#moves">move expressions in the dialog formalism</a>, where the moves should be uttered in the listed order. Moves here are similar to the <code>semantic_expression</code> field of <a href="#move-object">move objects</a>.</li>
+<li><code>utterance</code>: A string representing the output utterance from the system and should be realized by the client (e.g. by speaking it or displaying it as text).</li>
+<li><code>expected_passivity</code>: If not null, the value is a number corresponding to the number of seconds of user passivity after which the client is expected to make a <a href="#passivity-requests">passivity request</a>. If the value is 0.0, the passivity notification request should be issued immediately after having realized the system output.</li>
+<li><code>actions</code>: A list of <a href="#action-invocation-object">action invocation objects</a>, which needs to be invoked by the client. TDM assumes that the actions will succeed and reports them accordingly.</li>
+</ul>
+<p>The <code>nlu_result</code> object is provided for <a href="#natural-language-input-requests">natural language input requests</a>, unless an error has occurred. It has the following members:</p>
+<ul>
+<li><code>selected_utterance</code>: The utterance selected as the best candidate amoung the list of hypotheses.</li>
+<li><code>confidence</code>: A number representing the joint confidence of the input and the NLU processing.</li>
+</ul>
+<p>The <code>context</code> object is provided unless an error has occurred and contains the following members:</p>
+<ul>
+<li><code>active_ddd</code>: The name of the currently active DDD.</li>
+<li><code>facts</code>: Information gathered during the conversation (see <a href="#facts-object">facts object</a>).</li>
+<li><code>language</code>: ID of the current language.</li>
+<li><code>goal</code>: Currently active goal, expressed as a <a href="../../formalism/#goals">goal in the dialog formalism</a>.</li>
+<li><code>plan</code>: Remaining items on the current plan, represented by a list of <a href="../../formalism/#plan-items">plan items in the dialog formalism</a>.</li>
+<li><code>facts_being_grounded</code>: Information that the system is currently grounding with the user, represented as a list of <a href="#facts-object">facts objects</a>.</li>
+<li><code>selected_hypothesis</code>: The natural language hypothesis that the system decided to act on. If the system turn was requested with a <a href="#natural-language-input-requests">natural language input request</a>, this corresponds to one of the <a href="#hypothesis-object">hypothesis objects</a> that were part of it. This field is <code>null</code> if a hypothesis could not be determined.</li>
+<li><code>selected_interpretation</code>: The semantic interpretation that the system decided to act on. If the system turn was requested with a <a href="#semantic-input-requests">semantic input request</a>, this corresponds to one of the <a href="#interpretation-object">interpretation objects</a> that were part of it. This field is <code>null</code> if an interpretation could not be determined.</li>
+<li><code>expected_input</code>: An <a href="#expected-input-object">expected input object</a>, containing alternatives that TDM considers expected by the user the next turn. This field is <code>null</code> if TDM does not expect input, or if it doesn't know what input to expect.</li>
+</ul>
+<p>A <code>warnings</code> field is provided if warnings have been issued, as a list of strings, one string per warning. This can for instance happen when TDM is updated to a new version of this frontend API and the previous version is deprecated. In such cases, update your request formats to comply with the warning and avoid potential future errors:</p>
+<p><strong><a name="error-response"></a>Request that encountered an error</strong></p>
+<p>The TDM response when an error was encountered in the request contains an error description.</p>
+<pre><code class="json">{
+  &quot;version&quot;: &quot;3.3&quot;,
+  &quot;session&quot;: {
+    &quot;session_id&quot;: &quot;0000-abcd-1111-efgh&quot;
+  },
+  &quot;error&quot;: {
+    &quot;description&quot;: &quot;An exception was encountered when processing the request&quot;
+  }
+}
+</code></pre>
+
+<p>An <code>error</code> object is provided if an error has occurred. In such cases, an error should be reported to the user by the client, and the session should not be resumed with further requests. The <code>error</code> field has the following members:</p>
+<ul>
+<li><code>description</code>: A human readable technical description of the error.</li>
+</ul>
+<h1 id="action-invocation-object">Action invocation object</h1>
+<p>An action invocation object contains information about an action to be invoked by the client. The object has the following members:</p>
+<ul>
+<li><code>name</code> is a string corresponding to the action's name in <code>service_interface.xml</code>.</li>
+<li><code>parameters</code> contains values for all parameters that are specified for the method in <code>service_interface.xml</code>. If a parameter is unknown, its value is <code>null</code>. Otherwise it's an object containing:<ul>
+<li><code>sort</code>: ID of the predicate's sort as defined in the ontology.</li>
+<li><code>value</code>: ID of the value. For the sorts <code>integer</code> and <code>real</code>, the ID is a number. For other sorts, e.g. <code>string</code>, <code>datetime</code> and custom sorts, the ID is a string.</li>
+<li><code>grammar_entry</code>: Natural-language representation of the value.</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code class="json">{
+  &quot;name&quot;: &quot;call&quot;,
+  &quot;parameters&quot;: {
+    &quot;selected_contact&quot;: {
+      &quot;sort&quot;: &quot;contact&quot;,
+      &quot;value&quot;: &quot;contact_john&quot;,
+      &quot;grammar_entry&quot;: &quot;John&quot;
+    }
+  }
+}
+</code></pre>
+
+<h1 id="facts-object">Facts object</h1>
+<p>The <code>facts</code> field contains a map of key-value pairs for information gathered during the conversation, e.g. from the user. The map may be empty.</p>
+<p>The key is a string matching a predicate as defined in the ontology. The value is an object with the following members:</p>
+<ul>
+<li><code>sort</code>: ID of the predicate's sort as defined in the ontology.</li>
+<li><code>value</code>: ID of the value (e.g. a number or a string depending on the sort). For predicates of sort <code>datetime</code>, the ID is an ISO 8601 string.</li>
+<li><code>grammar_entry</code>: Natural-language representation of the value.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="json">{
+  &quot;facts&quot;: {
+    &quot;departure&quot;: {
+      &quot;sort&quot;: &quot;city&quot;,
+      &quot;value&quot;: &quot;city_012345&quot;,
+      &quot;grammar_entry&quot;: &quot;London&quot;
+    },
+    &quot;destination&quot;: {
+      &quot;sort&quot;: &quot;city&quot;,
+      &quot;value&quot;: &quot;city_012346&quot;,
+      &quot;grammar_entry&quot;: &quot;Newcastle&quot;
+    }
+  }
+}
+</code></pre>
+
+<h1 id="expected-input-object">Expected input object</h1>
+<p>The expected input object contains alternatives that TDM considers expected by the user the next turn. They can for instance be used to add quick-answer buttons to a GUI or chat client.</p>
+<p>The object has the following members:</p>
+<ul>
+<li><code>alternatives</code>: A list of <a href="#alternative-object">alternative objects</a>.</li>
+</ul>
+<p>If TDM asks a <a href="../../formalism/#yn-questions">yes-no question</a>, it expects the yes or no <a href="../../formalism/#answer-moves">answer</a>:</p>
+<pre><code class="json">{
+  &quot;alternatives&quot;: [
+    {&quot;semantic_expression&quot;: &quot;answer(yes)&quot;},
+    {&quot;semantic_expression&quot;: &quot;answer(no)&quot;}
+  ]
+}
+</code></pre>
+
+<p>If TDM asks an <a href="../../formalism/#alt-questions">alternative question</a> or a <a href="../../formalism/#wh-questions">wh-question</a> where the alternatives are known, the expected input object either contains <a href="../../formalism/#answer-moves">answer moves</a> with <a href="../../formalism/#unary-propositions">unary propositions</a>:</p>
+<pre><code class="json">{
+  &quot;alternatives&quot;: [
+    {&quot;semantic_expression&quot;: &quot;answer(selected_contact(contact_john))&quot;},
+    {&quot;semantic_expression&quot;: &quot;answer(selected_contact(contact_lisa))&quot;}
+  ]
+}
+</code></pre>
+
+<p>... or <a href="../../formalism/#request-moves">request</a> and <a href="../../formalism/#ask-moves">ask moves</a>:</p>
+<pre><code class="json">{
+  &quot;alternatives&quot;: [
+    {&quot;semantic_expression&quot;: &quot;request(call)&quot;},
+    {&quot;semantic_expression&quot;: &quot;ask(?X.phone_number(X))&quot;}
+  ]
+}
+</code></pre>
+
+<h1 id="alternative-object">Alternative object</h1>
+<p>An alternative object contains information about the moves that the user is expected to take the next turn. It contains the following members:</p>
+<ul>
+<li><code>semantic_expression</code>: A semantic expression of the expected move, expressed in the <a href="../../formalism/#moves">dialog formalism</a>.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../rasa_nlu/" title="Using Rasa NLU" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Using Rasa NLU
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../http_service/" title="API for HTTP services" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                API for HTTP services
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
