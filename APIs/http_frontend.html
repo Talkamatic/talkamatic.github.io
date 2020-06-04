@@ -10,7 +10,7 @@
       
       
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
     
     
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a2408e81.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
       
       
     
@@ -59,7 +59,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../.." title="TDM" class="md-header-nav__button md-logo" aria-label="TDM">
+    <a href=".." title="TDM" class="md-header-nav__button md-logo" aria-label="TDM">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -133,7 +133,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="TDM" class="md-nav__button md-logo" aria-label="TDM">
+    <a href=".." title="TDM" class="md-nav__button md-logo" aria-label="TDM">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -150,7 +150,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Introduction" class="md-nav__link">
+    <a href="../index.html" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -162,7 +162,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../formalism/" title="Dialog Formalism" class="md-nav__link">
+    <a href="../formalism.html" title="Dialog Formalism" class="md-nav__link">
       Dialog Formalism
     </a>
   </li>
@@ -174,7 +174,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tutorial/" title="Step-by-step tutorial" class="md-nav__link">
+    <a href="../tutorial.html" title="Step-by-step tutorial" class="md-nav__link">
       Step-by-step tutorial
     </a>
   </li>
@@ -186,7 +186,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../examples/" title="Examples" class="md-nav__link">
+    <a href="../examples.html" title="Examples" class="md-nav__link">
       Examples
     </a>
   </li>
@@ -198,7 +198,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rasa_nlu/" title="Using Rasa NLU" class="md-nav__link">
+    <a href="../rasa_nlu.html" title="Using Rasa NLU" class="md-nav__link">
       Using Rasa NLU
     </a>
   </li>
@@ -245,7 +245,7 @@
       
     
     
-    <a href="./" title="API for HTTP frontends" class="md-nav__link md-nav__link--active">
+    <a href="http_frontend.html" title="API for HTTP frontends" class="md-nav__link md-nav__link--active">
       API for HTTP frontends
     </a>
     
@@ -258,7 +258,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../http_service/" title="API for HTTP services" class="md-nav__link">
+    <a href="http_service.html" title="API for HTTP services" class="md-nav__link">
       API for HTTP services
     </a>
   </li>
@@ -597,7 +597,7 @@
 <p><strong>Response</strong></p>
 <p>See <a href="#response-format">response format</a>.</p>
 <h1 id="session-object">Session object</h1>
-<p>A session object can contain frontend-specific session data. The data is forwarded as is to all service calls on the <a href="../http_service/#session-object">HTTP API for services</a>. That way, the data can be used in service calls directly; or influence the dialog, for instance by being retrieved through service queries.</p>
+<p>A session object can contain frontend-specific session data. The data is forwarded as is to all service calls on the <a href="http_service.html#session-object">HTTP API for services</a>. That way, the data can be used in service calls directly; or influence the dialog, for instance by being retrieved through service queries.</p>
 <p>Note that session data is not automatically stored or attached to the session within TDM. It is returned in the <a href="#response-format">response</a> and can be injected in future requests. If specific data should be available to all service calls on a session, the data needs to be injected in every request on that session, or the DDD needs to retrieve it into the dialog state, for instance by a service query.</p>
 <p>For all requests except <a href="#start-session-requests">start session</a>, a <code>session_id</code> is required and used to identify to which session the request is being made.</p>
 <p>For start session requests however, the <code>session_id</code> is disallowed and instead generated by TDM. It should be retrieved from the <a href="#response-format">response</a>.</p>
@@ -649,7 +649,7 @@
 <li><code>ddd</code>: (optional) A string containing the DDD name. For DDD independent moves (e.g. <code>answer(yes)</code> and <code>request(up)</code>), this field may be omitted; in which case the currently active DDD will be used to parse the semantic expression.</li>
 <li><code>perception_confidence</code>: A float between <code>0.0</code> and <code>1.0</code>, representing the confidence that a spoken utterance actually matches the textual utterance, for instance when a speech-to-text (STT) component turned it into text. If no perception component was used, the confidence should be set to <code>1.0</code>.</li>
 <li><code>understanding_confidence</code>: A float between <code>0.0</code> and <code>1.0</code>, representing the confidence that the textual utterance actually represents this move, for instance when an NLU component interprets the textual utterance. If no understanding component was used, for instance if the user pressed a button, the confidence should be set to <code>1.0</code>.</li>
-<li><code>semantic_expression</code>: A semantic expression for the move, expressed in the <a href="../../formalism/#moves">dialog formalism</a>. Supported moves are <code>request</code>, <code>ask</code> and <code>answer</code>. See examples below for details.</li>
+<li><code>semantic_expression</code>: A semantic expression for the move, expressed in the <a href="../formalism.html#moves">dialog formalism</a>. Supported moves are <code>request</code>, <code>ask</code> and <code>answer</code>. See examples below for details.</li>
 </ul>
 <p><strong>Example of a <code>request</code> move:</strong></p>
 <p>A <code>request</code> move has just one parameter: An action. In this case the <code>call</code> action, which must be defined in the ontology of the <code>phone</code> DDD.</p>
@@ -773,7 +773,7 @@
 </ul>
 <p>The <code>output</code> object is provided unless an error has occurred and has the following members:</p>
 <ul>
-<li><code>moves</code>: The moves made by the system this turn. This is a list of <a href="../../formalism/#moves">move expressions in the dialog formalism</a>, where the moves should be uttered in the listed order. Moves here are similar to the <code>semantic_expression</code> field of <a href="#move-object">move objects</a>.</li>
+<li><code>moves</code>: The moves made by the system this turn. This is a list of <a href="../formalism.html#moves">move expressions in the dialog formalism</a>, where the moves should be uttered in the listed order. Moves here are similar to the <code>semantic_expression</code> field of <a href="#move-object">move objects</a>.</li>
 <li><code>utterance</code>: A string representing the output utterance from the system and should be realized by the client (e.g. by speaking it or displaying it as text).</li>
 <li><code>expected_passivity</code>: If not null, the value is a number corresponding to the number of seconds of user passivity after which the client is expected to make a <a href="#passivity-requests">passivity request</a>. If the value is 0.0, the passivity notification request should be issued immediately after having realized the system output.</li>
 <li><code>actions</code>: A list of <a href="#action-invocation-object">action invocation objects</a>, which needs to be invoked by the client. TDM assumes that the actions will succeed and reports them accordingly.</li>
@@ -788,8 +788,8 @@
 <li><code>active_ddd</code>: The name of the currently active DDD.</li>
 <li><code>facts</code>: Information gathered during the conversation (see <a href="#facts-object">facts object</a>).</li>
 <li><code>language</code>: ID of the current language.</li>
-<li><code>goal</code>: Currently active goal, expressed as a <a href="../../formalism/#goals">goal in the dialog formalism</a>.</li>
-<li><code>plan</code>: Remaining items on the current plan, represented by a list of <a href="../../formalism/#plan-items">plan items in the dialog formalism</a>.</li>
+<li><code>goal</code>: Currently active goal, expressed as a <a href="../formalism.html#goals">goal in the dialog formalism</a>.</li>
+<li><code>plan</code>: Remaining items on the current plan, represented by a list of <a href="../formalism.html#plan-items">plan items in the dialog formalism</a>.</li>
 <li><code>facts_being_grounded</code>: Information that the system is currently grounding with the user, represented as a list of <a href="#facts-object">facts objects</a>.</li>
 <li><code>selected_hypothesis</code>: The natural language hypothesis that the system decided to act on. If the system turn was requested with a <a href="#natural-language-input-requests">natural language input request</a>, this corresponds to one of the <a href="#hypothesis-object">hypothesis objects</a> that were part of it. This field is <code>null</code> if a hypothesis could not be determined.</li>
 <li><code>selected_interpretation</code>: The semantic interpretation that the system decided to act on. If the system turn was requested with a <a href="#semantic-input-requests">semantic input request</a>, this corresponds to one of the <a href="#interpretation-object">interpretation objects</a> that were part of it. This field is <code>null</code> if an interpretation could not be determined.</li>
@@ -868,7 +868,7 @@
 <ul>
 <li><code>alternatives</code>: A list of <a href="#alternative-object">alternative objects</a>.</li>
 </ul>
-<p>If TDM asks a <a href="../../formalism/#yn-questions">yes-no question</a>, it expects the yes or no <a href="../../formalism/#answer-moves">answer</a>:</p>
+<p>If TDM asks a <a href="../formalism.html#yn-questions">yes-no question</a>, it expects the yes or no <a href="../formalism.html#answer-moves">answer</a>:</p>
 <pre><code class="json">{
   &quot;alternatives&quot;: [
     {&quot;semantic_expression&quot;: &quot;answer(yes)&quot;},
@@ -877,7 +877,7 @@
 }
 </code></pre>
 
-<p>If TDM asks an <a href="../../formalism/#alt-questions">alternative question</a> or a <a href="../../formalism/#wh-questions">wh-question</a> where the alternatives are known, the expected input object either contains <a href="../../formalism/#answer-moves">answer moves</a> with <a href="../../formalism/#unary-propositions">unary propositions</a>:</p>
+<p>If TDM asks an <a href="../formalism.html#alt-questions">alternative question</a> or a <a href="../formalism.html#wh-questions">wh-question</a> where the alternatives are known, the expected input object either contains <a href="../formalism.html#answer-moves">answer moves</a> with <a href="../formalism.html#unary-propositions">unary propositions</a>:</p>
 <pre><code class="json">{
   &quot;alternatives&quot;: [
     {&quot;semantic_expression&quot;: &quot;answer(selected_contact(contact_john))&quot;},
@@ -886,7 +886,7 @@
 }
 </code></pre>
 
-<p>... or <a href="../../formalism/#request-moves">request</a> and <a href="../../formalism/#ask-moves">ask moves</a>:</p>
+<p>... or <a href="../formalism.html#request-moves">request</a> and <a href="../formalism.html#ask-moves">ask moves</a>:</p>
 <pre><code class="json">{
   &quot;alternatives&quot;: [
     {&quot;semantic_expression&quot;: &quot;request(call)&quot;},
@@ -898,7 +898,7 @@
 <h1 id="alternative-object">Alternative object</h1>
 <p>An alternative object contains information about the moves that the user is expected to take the next turn. It contains the following members:</p>
 <ul>
-<li><code>semantic_expression</code>: A semantic expression of the expected move, expressed in the <a href="../../formalism/#moves">dialog formalism</a>.</li>
+<li><code>semantic_expression</code>: A semantic expression of the expected move, expressed in the <a href="../formalism.html#moves">dialog formalism</a>.</li>
 </ul>
                 
               
@@ -918,7 +918,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../rasa_nlu/" title="Using Rasa NLU" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../rasa_nlu.html" title="Using Rasa NLU" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -933,7 +933,7 @@
           </a>
         
         
-          <a href="../http_service/" title="API for HTTP services" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="http_service.html" title="API for HTTP services" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -966,15 +966,15 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "../..",
+          base: "..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

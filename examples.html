@@ -10,16 +10,16 @@
       
       
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <link rel="shortcut icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
     
     
       
-        <title>Using Rasa NLU - TDM</title>
+        <title>Examples - TDM</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.a2408e81.min.css">
       
       
     
@@ -48,7 +48,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#generate-training-data" class="md-skip">
+        <a href="#basic-action" class="md-skip">
           Skip to content
         </a>
       
@@ -59,7 +59,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="TDM" class="md-header-nav__button md-logo" aria-label="TDM">
+    <a href="." title="TDM" class="md-header-nav__button md-logo" aria-label="TDM">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -76,7 +76,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Using Rasa NLU
+              Examples
             
           </span>
         </div>
@@ -133,7 +133,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="TDM" class="md-nav__button md-logo" aria-label="TDM">
+    <a href="." title="TDM" class="md-nav__button md-logo" aria-label="TDM">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -150,7 +150,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Introduction" class="md-nav__link">
+    <a href="index.html" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -162,7 +162,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../formalism/" title="Dialog Formalism" class="md-nav__link">
+    <a href="formalism.html" title="Dialog Formalism" class="md-nav__link">
       Dialog Formalism
     </a>
   </li>
@@ -174,20 +174,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorial/" title="Step-by-step tutorial" class="md-nav__link">
+    <a href="tutorial.html" title="Step-by-step tutorial" class="md-nav__link">
       Step-by-step tutorial
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../examples/" title="Examples" class="md-nav__link">
-      Examples
     </a>
   </li>
 
@@ -206,10 +194,22 @@
       
     
     
-    <a href="./" title="Using Rasa NLU" class="md-nav__link md-nav__link--active">
-      Using Rasa NLU
+    <a href="examples.html" title="Examples" class="md-nav__link md-nav__link--active">
+      Examples
     </a>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="rasa_nlu.html" title="Using Rasa NLU" class="md-nav__link">
+      Using Rasa NLU
+    </a>
   </li>
 
     
@@ -244,7 +244,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../APIs/http_frontend/" title="API for HTTP frontends" class="md-nav__link">
+    <a href="APIs/http_frontend.html" title="API for HTTP frontends" class="md-nav__link">
       API for HTTP frontends
     </a>
   </li>
@@ -256,7 +256,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../APIs/http_service/" title="API for HTTP services" class="md-nav__link">
+    <a href="APIs/http_service.html" title="API for HTTP services" class="md-nav__link">
       API for HTTP services
     </a>
   </li>
@@ -298,105 +298,46 @@
                   
                 
                 
-                <p>For better language coverage of your DDDs, you may want to enable the machine-learning based Rasa NLU.</p>
-<p>This guide is written for version <code>0.14.6</code> of Rasa NLU.</p>
-<p>Before getting started, make sure to use hosted a Rasa NLU with the necessary dependencies installed. For instance, if you plan on using a Spacy pipeline, ensure that it has the appropriate language models and Spacy itself installed.</p>
-<p>For more information, read up on the <a href="https://legacy-docs.rasa.com/docs/nlu/0.14.6/">Rasa NLU documentation</a>. We recommend <a href="https://legacy-docs.rasa.com/docs/nlu/0.14.6/docker/">running it in Docker</a>.</p>
-<h1 id="generate-training-data">Generate training data</h1>
-<p>In order to use Rasa NLU with TDM, we need to train the model. The Tala SDK can be used to generate training data for your DDD: <code>tala generate rasa my-ddd eng &gt; training_data.yml</code>.</p>
-<h1 id="configure-the-pipeline">Configure the pipeline</h1>
-<p>The generated training data comes with the <code>spacy_sklearn</code> pipeline by default. At the head of the training data we find:</p>
-<pre><code class="yml">language: &quot;en&quot;
-
-pipeline: &quot;spacy_sklearn&quot;
-
-data: |
-...
+                <p>Below are examples for you to imitate. Find one that matches your desired functionality and start stealing ideas.</p>
+<p>Remember to work test driven, adding one test at a time, then making it work, according to the <a href="tutorial">tutorial</a>.</p>
+<h1 id="basic-action">Basic action</h1>
+<p>This example is featured in the <a href="tutorial">tutorial</a>.</p>
+<p>Let your user do an action, using an <code>entity recognizer</code> for its <code>findout</code>. In this case, call a contact where the contact name is the recognized entity.</p>
+<pre><code>U&gt; Call John
+S&gt; Calling John.
 </code></pre>
-
-<p>Here, the pre-configured <code>spacy_sklearn</code> pipeline will be used, but <a href="https://legacy-docs.rasa.com/docs/nlu/0.14.6/choosing_pipeline/">there are others to choose from too</a>.</p>
-<p>It's also possible to configure the pipeline oneself, by listing the components explicitly. For instance, this is the <code>spacy_sklearn</code> pipeline:</p>
-<pre><code class="yml">pipeline:
-- name: &quot;SpacyNLP&quot;
-- name: &quot;SpacyTokenizer&quot;
-- name: &quot;RegexFeaturizer&quot;
-- name: &quot;SpacyFeaturizer&quot;
-- name: &quot;CRFEntityExtractor&quot;
-- name: &quot;EntitySynonymMapper&quot;
-- name: &quot;SklearnIntentClassifier&quot;
+<p>This is an example of the basic <a href="/#actions">action</a>, <a href="/#answers">answer</a> and <a href="/#feedback">feedback</a> concepts in TDM. It shows what is needed in order to perform an <code>action</code> that you implement yourself in the python <code>service interface</code>. In addition, it uses an <code>entity recognizer</code> to recognize contacts during run time.</p>
+<p>The source code is available on <a href="https://github.com/Talkamatic/dialogue-domain-descriptions/tree/master/basic_action">Github</a>.</p>
+<h1 id="basic-query">Basic query</h1>
+<p>Let your user ask a question. While similar to the <a href="examples/#basic-action">basic action</a> example, a query lets the system speak an answer to a question rather than performing an action. In this case, it answers what phone number a contact has.</p>
+<pre><code>U&gt; What is John's number?
+S&gt; John's number is 0701234567.
 </code></pre>
-
-<h1 id="add-pre-trained-named-entity-recognizers-ners">Add pre-trained named entity recognizers (NERs)</h1>
-<p>Rasa NLU <a href="https://legacy-docs.rasa.com/docs/nlu/0.14.6/entities/">supports pre-trained NERs</a> to be part of the pipeline, for instance the NERs from <a href="https://legacy-docs.rasa.com/docs/nlu/0.14.6/components/#ner-duckling-http">Duckling</a> and <a href="https://legacy-docs.rasa.com/docs/nlu/0.14.6/components/#ner-spacy">Spacy</a> which can be used together with TDM.</p>
-<h2 id="duckling">Duckling</h2>
-<p>In this version of TDM, the following Duckling entities are supported:
-- <code>number</code>: maps to the <code>integer</code> sort.
-- <code>time</code>: maps to the <code>datetime</code> sort.</p>
-<p>To enable Duckling, make sure it's available to the Rasa server and add its component to an explicit pipeline:</p>
-<pre><code class="yml">- name: &quot;DucklingHTTPExtractor&quot;
-  url: &quot;http://duckling:8000&quot;
+<p>This is an example of the basic <a href="/#queries">query</a> and <a href="/#answers">answer</a> concepts in TDM. It shows what is needed in order to ask a <code>query</code> that is answered by the system. You implement the answer logic yourself in the python <code>service interface</code>.</p>
+<p>The source code is available on <a href="https://github.com/Talkamatic/dialogue-domain-descriptions/tree/master/basic_query">Github</a>.</p>
+<h1 id="parameter-validation">Parameter validation</h1>
+<p>Should some actions or questions be unavailable, disallowed or prohibited for your user? Parameter validation makes it easy to decide at run-time. This example is based on the <a href="examples/#basic-action">basic action example</a>, disallowing phone calls to contacts with no phone number.</p>
+<pre><code>U&gt; Call Andy
+S&gt; Andy has no phone number.
 </code></pre>
-
-<p>Here, Duckling is available to the Rasa server at <code>http://duckling:8000</code>. The <code>spacy_sklearn</code> pipeline with the addition of Duckling then becomes:</p>
-<pre><code class="yml">pipeline:
-- name: &quot;SpacyNLP&quot;
-- name: &quot;SpacyTokenizer&quot;
-- name: &quot;RegexFeaturizer&quot;
-- name: &quot;SpacyFeaturizer&quot;
-- name: &quot;CRFEntityExtractor&quot;
-- name: &quot;EntitySynonymMapper&quot;
-- name: &quot;SklearnIntentClassifier&quot;
-- name: &quot;DucklingHTTPExtractor&quot;
-  url: &quot;http://duckling:8000&quot;
+<p>When a service is queried for parameters to actions and queries, the parameter is validated against all matching validators. If invalid, a specific grammar entry is used to provide system feedback and the answer is neglected.</p>
+<p>The source code is available on <a href="https://github.com/Talkamatic/dialogue-domain-descriptions/tree/master/parameter_validation">Github</a>.</p>
+<h1 id="incremental-search">Incremental search</h1>
+<p>Is your user looking for a single item in a set of many? Make sure your application asks just the perfect amount of questions to find one and only one match. In this case, contacts to call are searched with first and last names.</p>
+<pre><code>U&gt; Call John
+S&gt; What's his last name?
+U&gt; Johnson
+S&gt; Calling John Johnson at 0702446698.
 </code></pre>
-
-<h2 id="spacy">Spacy</h2>
-<p>In this version of TDM, the following Spacy entity types are supported:
-- <code>PERSON</code> and <code>PER</code>: map to the <code>person_name</code> sort.</p>
-<p>To enable Spacy, make sure it's available to the Rasa server and use a pipeline that contains <code>SpacyEntityExtractor</code>, e.g.</p>
-<pre><code class="yml">pipeline:
-- name: &quot;SpacyNLP&quot;
-- name: &quot;SpacyTokenizer&quot;
-- name: &quot;RegexFeaturizer&quot;
-- name: &quot;SpacyFeaturizer&quot;
-- name: &quot;CRFEntityExtractor&quot;
-- name: &quot;EntitySynonymMapper&quot;
-- name: &quot;SklearnIntentClassifier&quot;
-- name: &quot;SpacyEntityExtractor&quot;
+<p>Incremental search utilizes predicate features, which are declared in the ontology of the DDD. When a service is queried for individuals of the predicate, the features need to match. By asking the user to specify more features, the search can be narrowed down to finally match a single individual.</p>
+<p>The source code is available on <a href="https://github.com/Talkamatic/dialogue-domain-descriptions/tree/master/incremental_search">Github</a>.</p>
+<h1 id="android">Android</h1>
+<p>Is your Android device placing the calls for your users? Forward your actions to the Android frontend and do the job there.</p>
+<pre><code>U&gt; Call John
+S&gt; Calling John.
 </code></pre>
-
-<h1 id="train-the-model">Train the model</h1>
-<p>Once the training data and pipeline are configured, train your model according to the <a href="https://legacy-docs.rasa.com/docs/nlu/0.14.6/http/#post-train">Rasa NLU HTTP API</a>.</p>
-<p>For instance with:</p>
-<pre><code class="bash">curl -XPOST -H 'Content-Type: application/x-yml' 'http://my-rasa-nlu.my-cloud.com:5000/train?project=my-ddd&amp;model=my-model' --data-binary @training_data.yml
-</code></pre>
-
-<p>In this case, the URL, <code>project</code> and <code>model</code> also need to be specified in the DDD config in the next step.</p>
-<h1 id="configure-the-ddd">Configure the DDD</h1>
-<p>Make sure to configure Rasa NLU in the DDD config, for instance at <code>my_ddd/ddd.config.json</code>, by adding language specific <code>rasa_nlu</code> objects. For instance, for English:</p>
-<pre><code class="json">{
-    &quot;rasa_nlu&quot;: {
-        &quot;eng&quot;: {
-            &quot;url&quot;: &quot;http://my-rasa-nlu.my-cloud.com:5000/parse&quot;,
-            &quot;config&quot;: {
-                &quot;project&quot;: &quot;my-ddd&quot;,
-                &quot;model&quot;: &quot;my-model&quot;
-            }
-        }
-    }
-}
-</code></pre>
-
-<p>The <code>rasa_nlu</code> object contains the following fields:</p>
-<ul>
-<li><code>url</code>: A string URL, pointing to the <a href="https://legacy-docs.rasa.com/docs/nlu/0.14.6/http/#post-parse"><code>/parse</code> endpoint of a Rasa NLU server</a>.</li>
-<li><code>config</code>: An object sent in the JSON payload when TDM posts it to the <code>url</code>. It can contain for instance <code>project</code> and <code>model</code>, as specified by <a href="https://legacy-docs.rasa.com/docs/nlu/0.14.6/http/#post-parse">the Rasa NLU HTTP API</a>. TDM also adds the field <code>"q": "&lt;user utterance&gt;"</code>.</li>
-</ul>
-<p>If Rasa NLU should not be used for a particular language, remove the language altogether:</p>
-<pre><code class="json">{
-    &quot;rasa_nlu&quot;: {}
-}
-</code></pre>
+<p>This example combines the examples of action, query, parameter validation and entity recognition into one DDD and forwards the 'Call' action to the frontend. It can be used together with the <a href="https://github.com/Talkamatic/android-example">android-example</a>, an Android app to showcase how your frontend hears, speaks and thinks.</p>
+<p>The source code is available on <a href="https://github.com/Talkamatic/dialogue-domain-descriptions/tree/master/android">Github</a>.</p>
                 
               
               
@@ -415,7 +356,7 @@ data: |
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../examples/" title="Examples" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="tutorial.html" title="Step-by-step tutorial" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -424,19 +365,19 @@ data: |
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Examples
+                Step-by-step tutorial
               </div>
             </div>
           </a>
         
         
-          <a href="../APIs/http_frontend/" title="API for HTTP frontends" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="rasa_nlu.html" title="Using Rasa NLU" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                API for HTTP frontends
+                Using Rasa NLU
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -463,15 +404,15 @@ data: |
       
     </div>
     
-      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "..",
+          base: ".",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "assets/javascripts/worker/search.27c6a5e6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
