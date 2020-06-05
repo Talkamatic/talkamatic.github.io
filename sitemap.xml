@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>None</loc>
-     <lastmod>2020-06-04</lastmod>
+     <loc>https://talkamatic.github.io/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-06-04</lastmod>
+     <loc>https://talkamatic.github.io/formalism/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-06-04</lastmod>
+     <loc>https://talkamatic.github.io/hands-on/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-06-04</lastmod>
+     <loc>https://talkamatic.github.io/hands-on/tutorial/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-06-04</lastmod>
+     <loc>https://talkamatic.github.io/hands-on/examples/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-06-04</lastmod>
+     <loc>https://talkamatic.github.io/hands-on/rasa_nlu/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-06-04</lastmod>
+     <loc>https://talkamatic.github.io/apis/http_frontend/</loc>
+     <lastmod>2020-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://talkamatic.github.io/apis/http_service/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
