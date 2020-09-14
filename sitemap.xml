@@ -191,5 +191,25 @@
      <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/proposition/</loc>
      <lastmod>2020-09-14</lastmod>
      <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/ontology/ontology/</loc>
+     <lastmod>2020-09-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/ontology/elements/sort/</loc>
+     <lastmod>2020-09-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/ontology/elements/predicate/</loc>
+     <lastmod>2020-09-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/ontology/elements/individual/</loc>
+     <lastmod>2020-09-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/ontology/elements/action/</loc>
+     <lastmod>2020-09-14</lastmod>
+     <changefreq>daily</changefreq>
     </url>
 </urlset>
