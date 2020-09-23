@@ -148,7 +148,7 @@
      <lastmod>2020-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/ask_feature/</loc>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/plan/</loc>
      <lastmod>2020-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -160,23 +160,7 @@
      <lastmod>2020-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/background/</loc>
-     <lastmod>2020-09-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/bind/</loc>
-     <lastmod>2020-09-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/downdate_condition/</loc>
-     <lastmod>2020-09-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/findout/</loc>
-     <lastmod>2020-09-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/has_value/</loc>
      <lastmod>2020-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -192,15 +176,31 @@
      <lastmod>2020-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/is_shared_fact/</loc>
-     <lastmod>2020-09-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/log/</loc>
      <lastmod>2020-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/plan/</loc>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/ask_feature/</loc>
+     <lastmod>2020-09-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/background/</loc>
+     <lastmod>2020-09-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/bind/</loc>
+     <lastmod>2020-09-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/downdate_condition/</loc>
+     <lastmod>2020-09-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/has_value/</loc>
+     <lastmod>2020-09-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/is_shared_fact/</loc>
      <lastmod>2020-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
