@@ -136,6 +136,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/invoke_domain_query/</loc>
+         <lastmod>2022-04-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/invoke_service_action/</loc>
          <lastmod>2022-04-25</lastmod>
          <changefreq>daily</changefreq>
