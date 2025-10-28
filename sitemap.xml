@@ -2,310 +2,310 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://talkamatic.github.io/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/formalism/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/ibdm/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/api-definitions/nlg_api/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/api-definitions/nlu_api/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/api-definitions/pipeline_api/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/api-definitions/service_api/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/api-definitions/shared_objects/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/domain/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/always_relevant/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/ask_feature/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/assume_issue/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/assume_shared/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/assume_system_belief/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/background/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/bind/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/change_ddd/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/conditions/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/downdate_condition/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/end_turn/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/findout/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/forget/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/forget_all/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/forget_shared/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/get_done/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/hint/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/if/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/inform/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/invoke_domain_query/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/invoke_service_action/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/invoke_service_query/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/iterate/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/log/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/once/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/plan/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/postplan/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/proposition/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/raise/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/service_query/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/signal_action_completion/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/children/signal_action_failure/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/elements/dependency/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/elements/goal/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/elements/iterator/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/elements/parameters/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/elements/query/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/domain/elements/validator/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/grammar/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/children/item/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/children/one-of/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/children/slot/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/children/vp/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/elements/action/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/elements/answer/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/elements/greeting/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/elements/individual/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/elements/preconfirm/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/elements/question/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/elements/report/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/grammar/elements/validity/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/ontology/ontology/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/ontology/elements/action/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/ontology/elements/individual/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/ontology/elements/predicate/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/ontology/elements/sort/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/service_interface/service_interface/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/service_interface/children/failure_reasons/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/service_interface/children/parameters/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/service_interface/children/target/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/service_interface/elements/action/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/service_interface/elements/query/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/dialog-domain-description-definition/service_interface/elements/validator/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/for-dialog-designers/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/for-dialog-designers/examples/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/for-dialog-designers/rasa_nlu/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://talkamatic.github.io/for-dialog-designers/tutorial/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
 </urlset>
