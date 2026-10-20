@@ -21,7 +21,19 @@
          <lastmod>2026-10-20</lastmod>
     </url>
     <url>
+         <loc>https://docs.talkamatic.se/data-languages/ddd-json/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
          <loc>https://docs.talkamatic.se/data-languages/ddd/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.talkamatic.se/data-languages/domain-declarations/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.talkamatic.se/data-languages/domain-xml/</loc>
          <lastmod>2026-10-20</lastmod>
     </url>
     <url>
@@ -29,7 +41,39 @@
          <lastmod>2026-10-20</lastmod>
     </url>
     <url>
+         <loc>https://docs.talkamatic.se/data-languages/ontology-xml/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.talkamatic.se/data-languages/plan-items/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
          <loc>https://docs.talkamatic.se/data-languages/semantics/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.talkamatic.se/data-languages/service-interface-xml/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.talkamatic.se/data-languages/domain/bind/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.talkamatic.se/data-languages/domain/conditions/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.talkamatic.se/data-languages/domain/downdate-conditions/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.talkamatic.se/data-languages/domain/findout/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.talkamatic.se/data-languages/domain/invoke-service-action/</loc>
          <lastmod>2026-10-20</lastmod>
     </url>
 </urlset>
